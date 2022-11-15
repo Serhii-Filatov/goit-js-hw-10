@@ -1,5 +1,5 @@
 export default function countryCard(country) {
-    const {flag, name, capital, population, languages} = country
+    const {flag, name, capital, population, languages} = country;
 
     return `<div class="country-card">
                 <div class="title">
@@ -7,9 +7,9 @@ export default function countryCard(country) {
                         <h1 class="name">${ name }</h1>
                 </div>                                    
                 <ul class="description-list">
-                    <li><span class="capital">capital:  </span> ${ capital }</li>
-                    <li><span class="population">population:  </span> ${ population }</li>
-                    <li><span class="languages">languages:  </span> ${ languages }</li>
+                    <li><span class="capital">capital:   ${ capital }</span></li>
+                    <li><span class="population">population:   ${ population }</span></li>
+                    <li><span class="languages">languages:   ${ languages }</span></li>
                 </ul>
-            </div>`
+            </div>`;
 }

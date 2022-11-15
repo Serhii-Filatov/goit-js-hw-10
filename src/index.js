@@ -1,10 +1,10 @@
 import './css/styles.css';
 const debounce = require('lodash.debounce'); 
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import 'notiflix/dist/notiflix-3.2.5.min.css'
-import fetchContries from '../src/fetchCountries.js'
-import countryCard from '../src/template/country-card.js'
-import countryList from '../src/template/country-list.js'
+import 'notiflix/dist/notiflix-3.2.5.min.css';
+import fetchContries from '../src/fetchCountries.js';
+import countryCard from '../src/template/country-card.js';
+import countryList from '../src/template/country-list.js';
 
 const refs = {
     input: document.querySelector('#search-box'),
@@ -14,17 +14,17 @@ const refs = {
 
 const DEBOUNCE_DELAY = 300;
 
-refs.input.addEventListener('input', debounce(findCountry, DEBOUNCE_DELAY))
+refs.input.addEventListener('input', debounce(findCountry, DEBOUNCE_DELAY));
 
 function findCountry(event) {
-    let name = event.target.value
-    name = name.trim()
+    let name = event.target.value;
+    name = name.trim();
 
     fetchContries(name).then(response => {
         return response;
     })
     .then(result => {
-        clearPage()
+        clearPage();
 
         if (result.length === 1) {
             const country = {
@@ -35,7 +35,7 @@ function findCountry(event) {
                 languages: Object.values(result[0].languages).join(', '),
             }
 
-            refs.info.insertAdjacentHTML('beforeend', countryCard(country))
+            refs.info.insertAdjacentHTML('beforeend', countryCard(country));
         }
 
         if (result.length > 2 && result.length <= 10) {
@@ -45,10 +45,10 @@ function findCountry(event) {
                     flag: item.flags.svg,                
                 }               
 
-                return countryList(country)                
-            }).join('')
+                return countryList(country);                
+            }).join('');
         
-            refs.list.insertAdjacentHTML('beforeend', markup)
+            refs.list.insertAdjacentHTML('beforeend', markup);
         }
         
         if (result.length > 10) {
@@ -59,7 +59,7 @@ function findCountry(event) {
         clearPage()
         Notify.failure('Oops, there is no country with that name.');
         Notify.failure(`${error}`);
-    })
+    });
 }
 
 function clearPage() {

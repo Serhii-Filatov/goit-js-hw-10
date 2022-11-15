@@ -7,7 +7,7 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: #7d5c5c4f;
   color: #212121;
   line-height: 1.5;
 }
@@ -61,9 +61,15 @@ body {
 
 .description-list {
   list-style: none;
+  
 }
 
 .description-list span {
   font-size: 24px;
   font-weight: 900;
+}
+
+.capital, .population, .languages{
+  color:rgb(53, 50, 50);
+  text-transform: capitalize;
 }
