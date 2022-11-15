@@ -10,30 +10,3 @@ export default function fetchCountries(name) {
                     }
                 );
 }
-
-        
-
-        
-        
-
-        
-        
-    // .then(response => {
-    //     return response.json();
-    // })
-    // .then(response => {
-    //     // console.log(response)
-
-    //     // nameOfficial = response[0].name.official
-    //     // capital = response[0].capital[0]
-    //     // population = response[0].population
-    //     // flagsSvg = response[0].flags.svg
-    //     // languages = Object.values(response[0].languages)
-    //     // console.log(languages)
-
-    // })
-    // .catch(error => {
-    //     console.log(error)
-    // })
-// }
-

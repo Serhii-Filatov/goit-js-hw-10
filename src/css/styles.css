@@ -7,10 +7,9 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #fafafa; */
+  background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
-  background-image: linear-gradient(135deg, #FFA8A8 10%, #FCFF00 100%);
 }
 
 #search-box {
@@ -53,13 +52,10 @@ body {
 .country-card {
   padding: 10px;
   width: 500px;
-  background-color: azure;
-  border: 2px solid black;
 }
 
 .title {
   display: flex;
-  justify-content: center;
   align-items: baseline;
 }
 
@@ -70,5 +66,4 @@ body {
 .description-list span {
   font-size: 24px;
   font-weight: 900;
-  color: rgb(255, 115, 0);
 }
